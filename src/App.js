@@ -27,6 +27,7 @@ const App = () => {
         {/* <AdditionalFeatures store={state.store} /> */}
         <AdditionalFeatures />
         {/* <Total car={state.car} additionalPrice={state.additionalPrice} /> */}
+        <Total />
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 // import { getCarDetails } from '../actions';
 
-const Header = (props) => {
+const Header = props => {
   return (
     <>
       <figure className="image is-128x128">

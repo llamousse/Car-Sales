@@ -8,7 +8,7 @@ const initialState = {
     ]
 };
 
-export const carReducer = (state = initialState, action) => {
+export const featuresReducer = (state = initialState, action) => {
     switch (action.type) {
         // case 'ADD_MEMBER':
         //     return {

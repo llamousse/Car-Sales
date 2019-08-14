@@ -18,7 +18,7 @@ const Header = props => {
 const mapStateToProps = state => {
   return {
     car: state.car
-  }
+  };
 };
 
 export default connect(

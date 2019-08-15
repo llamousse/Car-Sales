@@ -12,9 +12,10 @@ export const addFeature = (feature, price) => {
 };
 
 // action creator to remove features on car
-export const deleteFeature = (feature) => {
+export const deleteFeature = (feature, price) => {
     return {
         type: 'DELETE_FEATURE',
-        payload: feature
+        payload: feature,
+        price: price
     };
 };

@@ -16,6 +16,6 @@ export const deleteFeature = (feature, price) => {
     return {
         type: 'DELETE_FEATURE',
         payload: feature,
-        price: price
+        payload2: price
     };
 };

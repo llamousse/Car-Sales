@@ -17,23 +17,31 @@ const initialState = {
 
 export const carsReducer = (state = initialState, action) => {
     switch (action.type) {
-        // case 'ADD_MEMBER':
-        //     return {
-        //         ...state,
-        //         members: [
-        //             ...state.members,
-        //             { name: action.payload, dragonStatus: false }
-        //         ]
-        //     };
-
-        case 'ADDED_FEATURE':
+        case 'ADD_FEATURE':
             return {
                 ...state,
-                car: [
-                    ...state.car.features,
-                    action.payload
-                ]
+                additionalPrice: state.additionalPrice + action.payload2, 
+                car: {
+                    ...state.car,
+                    features: [
+                        ...state.car.features,
+                        {
+                            name: action.payload,
+                            // price: action.payload2
+                        }
+                    ]
+                },
+                store: state.store.filter(item => item.name !== action.payload)
             };
+
+        case 'DELETE_FEATURE':
+            return {
+                ...state,
+                car: {
+                    ...state.car,
+                    features: state.car.features.filter(item => item.name != action.payload)
+                }
+            }
 
         default:
             return state;
